@@ -11,7 +11,9 @@ import SwiftUI
 struct Noten_Tracker_CombineApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                StudentView()
+            }
         }
     }
 }

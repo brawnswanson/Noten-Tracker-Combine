@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Grade" representedClassName="Grade" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="currentGrade" inverseEntity="State"/>
+        <relationship name="subject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subject" inverseName="grades" inverseEntity="Subject"/>
+    </entity>
+    <entity name="SchoolYear" representedClassName="SchoolYear" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="isDefaultForSudent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="defaultSchoolYear" inverseEntity="Student"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="currentSchoolYear" inverseEntity="State"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="schoolYears" inverseEntity="Student"/>
+        <relationship name="subjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subject" inverseName="schoolYear" inverseEntity="Subject"/>
+    </entity>
+    <entity name="State" representedClassName="State" syncable="YES">
+        <relationship name="currentGrade" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Grade" inverseName="state" inverseEntity="Grade"/>
+        <relationship name="currentSchoolYear" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolYear" inverseName="state" inverseEntity="SchoolYear"/>
+        <relationship name="currentStudent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="state" inverseEntity="Student"/>
+        <relationship name="currentSubject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subject" inverseName="state" inverseEntity="Subject"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="defaultSchoolYear" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolYear" inverseName="isDefaultForSudent" inverseEntity="SchoolYear"/>
+        <relationship name="schoolYears" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolYear" inverseName="student" inverseEntity="SchoolYear"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="currentStudent" inverseEntity="State"/>
+    </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="inAverage" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="grades" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Grade" inverseName="subject" inverseEntity="Grade"/>
+        <relationship name="schoolYear" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolYear" inverseName="subjects" inverseEntity="SchoolYear"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="currentSubject" inverseEntity="State"/>
+    </entity>
+    <elements>
+        <element name="Grade" positionX="-18" positionY="27" width="128" height="14"/>
+        <element name="SchoolYear" positionX="-54" positionY="-9" width="128" height="119"/>
+        <element name="State" positionX="0" positionY="45" width="128" height="14"/>
+        <element name="Student" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Subject" positionX="-36" positionY="9" width="128" height="14"/>
+    </elements>
+</model>

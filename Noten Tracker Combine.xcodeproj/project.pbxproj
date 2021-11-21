@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		C457D310274A74A10062158A /* Noten_Tracker_CombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D30F274A74A10062158A /* Noten_Tracker_CombineApp.swift */; };
-		C457D312274A74A10062158A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D311274A74A10062158A /* ContentView.swift */; };
 		C457D314274A74A20062158A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C457D313274A74A20062158A /* Assets.xcassets */; };
 		C457D317274A74A20062158A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C457D316274A74A20062158A /* Preview Assets.xcassets */; };
+		C457D31F274A74B60062158A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D31E274A74B60062158A /* Student.swift */; };
+		C457D321274A74BD0062158A /* SchoolYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D320274A74BD0062158A /* SchoolYear.swift */; };
+		C457D323274A74C40062158A /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D322274A74C40062158A /* Subject.swift */; };
+		C457D325274A74C80062158A /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D324274A74C80062158A /* Grade.swift */; };
+		C457D327274A74E40062158A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D326274A74E40062158A /* State.swift */; };
+		C457D32A274A74F90062158A /* NotenTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C457D328274A74F90062158A /* NotenTracker.xcdatamodeld */; };
+		C457D32C274A9E060062158A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D32B274A9E060062158A /* Model.swift */; };
+		C457D330274A9FE70062158A /* StudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457D32F274A9FE70062158A /* StudentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C457D30C274A74A10062158A /* Noten Tracker Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Noten Tracker Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C457D30F274A74A10062158A /* Noten_Tracker_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noten_Tracker_CombineApp.swift; sourceTree = "<group>"; };
-		C457D311274A74A10062158A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C457D313274A74A20062158A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C457D316274A74A20062158A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C457D31E274A74B60062158A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		C457D320274A74BD0062158A /* SchoolYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolYear.swift; sourceTree = "<group>"; };
+		C457D322274A74C40062158A /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		C457D324274A74C80062158A /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		C457D326274A74E40062158A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		C457D329274A74F90062158A /* NotenTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotenTracker.xcdatamodel; sourceTree = "<group>"; };
+		C457D32B274A9E060062158A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C457D32F274A9FE70062158A /* StudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,10 @@
 		C457D30E274A74A10062158A /* Noten Tracker Combine */ = {
 			isa = PBXGroup;
 			children = (
+				C457D32E274A9FD80062158A /* Views */,
+				C457D32D274A9E1C0062158A /* Model */,
+				C457D31D274A74AC0062158A /* CoreData */,
 				C457D30F274A74A10062158A /* Noten_Tracker_CombineApp.swift */,
-				C457D311274A74A10062158A /* ContentView.swift */,
 				C457D313274A74A20062158A /* Assets.xcassets */,
 				C457D315274A74A20062158A /* Preview Content */,
 			);
@@ -65,6 +81,35 @@
 				C457D316274A74A20062158A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C457D31D274A74AC0062158A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C457D31E274A74B60062158A /* Student.swift */,
+				C457D320274A74BD0062158A /* SchoolYear.swift */,
+				C457D322274A74C40062158A /* Subject.swift */,
+				C457D324274A74C80062158A /* Grade.swift */,
+				C457D326274A74E40062158A /* State.swift */,
+				C457D328274A74F90062158A /* NotenTracker.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C457D32D274A9E1C0062158A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C457D32B274A9E060062158A /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C457D32E274A9FD80062158A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C457D32F274A9FE70062158A /* StudentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C457D312274A74A10062158A /* ContentView.swift in Sources */,
+				C457D32C274A9E060062158A /* Model.swift in Sources */,
+				C457D321274A74BD0062158A /* SchoolYear.swift in Sources */,
+				C457D32A274A74F90062158A /* NotenTracker.xcdatamodeld in Sources */,
+				C457D323274A74C40062158A /* Subject.swift in Sources */,
+				C457D327274A74E40062158A /* State.swift in Sources */,
+				C457D31F274A74B60062158A /* Student.swift in Sources */,
 				C457D310274A74A10062158A /* Noten_Tracker_CombineApp.swift in Sources */,
+				C457D330274A9FE70062158A /* StudentView.swift in Sources */,
+				C457D325274A74C80062158A /* Grade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +393,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C457D328274A74F90062158A /* NotenTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C457D329274A74F90062158A /* NotenTracker.xcdatamodel */,
+			);
+			currentVersion = C457D329274A74F90062158A /* NotenTracker.xcdatamodel */;
+			path = NotenTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C457D304274A74A10062158A /* Project object */;
 }
